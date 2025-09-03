@@ -1,38 +1,482 @@
-.App {
+/* Espaço para o conteúdo não ficar escondido atrás do header fixo */
+body {
+  margin: 0;
+  padding: 0;
+   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Fonte global */
+}
+
+main {
+  
+  padding-top: 100px; /* mesmo valor da altura do header (55px + 15px padding) */
+}
+
+
+/* Cabeçalho */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+  padding: 15px 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Fica sempre acima */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5); /* sombra discreta */
+ 
+}
+
+/* Área da logo + nome */
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Logo circular */
+.logo {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 50%; /* círculo */
+  border: 2px solid #fff; /* borda branca */
+}
+
+/* Nome da empresa */
+.empresa {
+  color: #000000;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Navegação */
+.nav .menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin: 0 15px;
+}
+
+/* Links */
+.menu li a {
+  text-decoration: none; /* tira a linha */
+  color: #000000; /* cor branca */
+  font-size: 18px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #00bcd4; /* azul no hover */
+  transform: scale(1.1); /* zoom suave */
+}
+
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.carousel-slider img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+/* Overlay do texto sobreposto (transparente) */
+.carousel-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  transform: translateY(-50%);
+  color: #fff;
+  max-width: 400px;
+  z-index: 2;
+}
+
+.carousel-overlay h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* melhora visibilidade sobre a imagem */
+}
+
+/* Botão WhatsApp */
+.btn-whatsapp {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #25d366;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  background-color: #20b358;
+  transform: scale(1.05);
+}
+
+/* Dots do carrossel */
+.slick-dots li button:before {
+  color: #fff;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #00bcd4;
+}
+
+/* Seção Sobre */
+.sobre {
+  padding: 40px 30px;
+  background-color: #f4f4f9;
+  text-align: center; /* centraliza tudo */
+}
+
+.sobre h2 {
+  font-size: 30px;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+  display: inline-block; /* permite barra com a largura do título */
+  position: relative;
+}
+
+/* Linha azul exatamente do tamanho do título */
+.linha-azul {
+  display: block;
+  width: 30%; /* 100% do h2 */
+  height: 3px;
+  background-color: #00bcd4; /* azul do hover do cabeçalho */
+  border: none;
+  margin: 10px auto 20px auto; /* centraliza a linha */
+}
+
+.sobre p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  max-width: 600px;
+  margin: 0 auto; /* centraliza o parágrafo */
+}
+
+/* Cards Missão, Visão, Valores */
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* permite quebra em telas menores */
+  gap: 30px; /* espaço entre cards */
+  padding: 60px 50px;
+  background-color: #ffffff;
+  z-index: 1;
+  position: relative;
+}
+
+.card {
+  background-color: #f4f4f9;
+  border-radius: 10px;
+  padding: 30px 20px;
+  width: 280px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card h3 {
+  font-size: 22px;
+  color: #1a1a1a;
+  margin-bottom: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Efeito hover nos cards */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+/* Container Diferenciais */
+.diferenciais-section {
+  padding: 50px;
+  background-color: #f4f4f9;
+}
+
+.diferenciais-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Texto Diferenciais */
+.diferenciais-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+}
+
+/* Etapas numeradas */
+.etapa {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.etapa h2 {
+  font-size: 24px;
+  color: #00bcd4;
+  margin: 0;
+  width: 35px; /* largura fixa para alinhar texto */
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* Imagem redonda à direita */
+.diferenciais-img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  max-width: 400px;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.diferenciais-img img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* circular */
+  object-fit: cover;
+  border: 3px solid #00bcd4;
+  margin-bottom: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.diferenciais-img p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* Responsividade */
+@media screen and (max-width: 900px) {
+  .diferenciais-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .diferenciais-text, .diferenciais-img {
+    align-items: center;
+    text-align: center;
   }
+
+  .etapa {
+    justify-content: center;
+  }
+}
+/* Container Como Funciona */
+.funciona-section {
+  padding: 50px;
+  background-color: #fff;
+}
+
+.funciona-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Texto Como Funciona */
+.funciona-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+}
+
+/* Etapas numeradas */
+.funciona-text .etapa {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.funciona-text .etapa h2 {
+  font-size: 24px;
+  color: #00bcd4;
+  margin: 0;
+  width: 35px; /* largura fixa para alinhar texto */
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* Imagem redonda à direita */
+.funciona-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  text-align: center;
+}
+
+.funciona-img img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* circular */
+  object-fit: cover;
+  border: 3px solid #00bcd4;
+  margin-bottom: 15px;
+}
+
+.funciona-img p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* Responsividade */
+@media screen and (max-width: 900px) {
+ .funciona-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* centraliza verticalmente */
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* O restante permanece igual */
+
+  .funciona-text, .funciona-img {
+    align-items: center;
+    text-align: center;
+  }
+
+  .funciona-text .etapa {
+    justify-content: center;
+  }
+}
+/* Rodapé */
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 20px 40px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo pequena */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo img {
+  width: 40px; /* menor que o cabeçalho */
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+.footer-logo span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Informações à direita */
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+/* Redes sociais */
+.footer-links {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-links a {
+  color: #fff;
+  font-size: 22px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #00bcd4;
+  transform: scale(1.2);
+}
+
+/* Copyright */
+.footer-copy {
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .footer-info {
+    align-items: center;
+  }
+}
+/* Botão de voltar ao topo */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  display: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+  z-index: 999;
+}
+
+.back-to-top:hover {
+  background: #0097a7;
+  transform: scale(1.1);
 }

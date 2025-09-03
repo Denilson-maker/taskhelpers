@@ -1,0 +1,164 @@
+/* Espaço para não ficar atrás do cabeçalho fixo */
+.servico-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 7rem 1.5rem 3rem; /* aumenta/diminui conforme a altura do teu header */
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Hero / topo */
+.servico-hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.servico-hero h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #0d6efd; /* azul suave */
+}
+
+.servico-hero p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.cta-whatsapp {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  background: #25d366;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.25);
+}
+
+.cta-whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(37, 211, 102, 0.35);
+}
+
+.cta-whatsapp.large {
+  padding: 1rem 1.5rem;
+  font-size: 1.05rem;
+}
+
+/* Grid de cards */
+.servico-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.servico-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  border: 1px solid #eef0f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.servico-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.card-header .emoji {
+  font-size: 1.6rem;
+}
+
+.card-header h2 {
+  font-size: 1.15rem;
+  margin: 0;
+  color: #111827;
+}
+
+.card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.card-list li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin: 0.4rem 0;
+  line-height: 1.45;
+  font-size: 0.98rem;
+}
+
+.card-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0.05rem;
+  font-weight: bold;
+  color: #0d6efd;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: auto;
+}
+
+.tag {
+  background: #eef4ff;
+  color: #0d6efd;
+  padding: 0.25rem 0.55rem;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+/* Notas legais */
+.notas-legais {
+  margin: 1.25rem 0 0.5rem 0;
+  font-size: 0.9rem;
+  color: #555;
+  background: #fafafa;
+  border: 1px dashed #e5e7eb;
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+}
+
+/* CTA final centralizada */
+.cta-centro {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Responsividade suave */
+@media (min-width: 1200px) {
+  .servico-hero h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .servico-container {
+    padding: 6rem 1rem 2.5rem;
+  }
+  .servico-hero p {
+    font-size: 0.98rem;
+  }
+}
+
