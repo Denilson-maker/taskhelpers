@@ -427,9 +427,20 @@ main {
 }
 
 /* =====================================
-   Responsividade geral
+   Responsividade geral - mobile
 ===================================== */
 @media screen and (max-width: 768px) {
+  /* Botão hamburguer preto */
+  .hamburguer {
+    display: block;
+    background: none;
+    border: none;
+    color: #000; /* preto */
+    font-size: 26px;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
   /* Menu mobile */
   .nav {
     position: fixed;
@@ -461,3 +472,4 @@ main {
     color: #fff;
   }
 }
+
