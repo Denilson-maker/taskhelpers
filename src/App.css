@@ -600,6 +600,7 @@ main {
     border: none;
     cursor: pointer;
     z-index: 1100;
+    padding: 10px 15px; 
   }
 
   /* Menu escondido */
@@ -617,6 +618,8 @@ main {
     padding-top: 60px;         /* distância do topo */
     transition: right 0.3s ease-in-out;
     z-index: 1000;
+   
+   
   }
 
   /* Menu aberto */
