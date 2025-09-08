@@ -21,9 +21,9 @@ function HomeCabecalho() {
         <span className="empresa">Task Helpers</span>
       </div>
 
-      {/* Botão hambúrguer (só no mobile) */}
+      {/* Botão hambúrguer */}
       <button className="hamburguer" onClick={toggleMenu}>
-        {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+        {menuOpen ? <FaTimes size={24} color="#fff" /> : <FaBars size={24} color="#000" />}
       </button>
 
       {/* Menu */}

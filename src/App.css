@@ -586,49 +586,65 @@ main {
   }
 }
 /* =====================================
-   Responsividade geral - mobile
+   Menu mobile responsivo
 ===================================== */
+.hamburguer {
+  display: none; /* default: escondido */
+}
+
 @media screen and (max-width: 768px) {
-  /* Botão hamburguer preto */
+  /* Botão hambúrguer */
   .hamburguer {
     display: block;
     background: none;
     border: none;
-    color: #000; /* preto */
-    font-size: 26px;
     cursor: pointer;
     z-index: 1100;
   }
 
-  /* Menu mobile */
+  /* Menu escondido */
   .nav {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 40%;
+    width: 40%;           /* largura do menu */
     height: 100vh;
     background-color: #111;
     box-shadow: -2px 0 8px rgba(0, 0, 0, 0.4);
     display: flex;
-    justify-content: center; /* horizontal */
-    align-items: flex-start; /* vertical: topo */
-    padding-top: 60px;       /* espaço entre topo e links */
+    justify-content: center;   /* horizontal */
+    align-items: flex-start;   /* vertical: topo */
+    padding-top: 60px;         /* distância do topo */
     transition: right 0.3s ease-in-out;
     z-index: 1000;
   }
 
+  /* Menu aberto */
   .nav.active {
     right: 0;
   }
 
+  /* Lista de links */
   .nav .menu {
     flex-direction: column;
     gap: 25px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu li {
+    margin: 0;
   }
 
   .menu li a {
     font-size: 20px;
     color: #fff;
+    text-decoration: none;
+    transition: transform 0.3s, color 0.3s;
+  }
+
+  .menu li a:hover {
+    color: #00bcd4;
+    transform: scale(1.05);
   }
 }
-
