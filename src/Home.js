@@ -6,6 +6,7 @@ import React, { useEffect } from "react";
 import HomeCabecalho from "./HomeCabecalho";
 import HomeRodape from "./HomeRodape";
 
+
 function Home() {
   const settings = {
     dots: true,

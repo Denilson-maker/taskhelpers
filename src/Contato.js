@@ -1,8 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import HomeCabecalho from "./HomeCabecalho";
 import HomeRodape from "./HomeRodape";
 import "./Contato.css";
+
 function Contato() {
+  const [status, setStatus] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+
+    const response = await fetch("https://formspree.io/f/mpwjkybw", {
+      method: "POST",
+      body: data,
+      headers: { Accept: "application/json" },
+    });
+
+    if (response.ok) {
+      setStatus("✅ Mensagem enviada com sucesso!");
+      form.reset();
+    } else {
+      setStatus("❌ Ocorreu um erro. Por favor, tente novamente.");
+    }
+  };
+
   return (
     <div>
       <HomeCabecalho />
@@ -14,7 +36,16 @@ function Contato() {
         <section className="contato-info">
           <h2>📱 Nossos Canais</h2>
           <ul>
-            <li><strong>WhatsApp:</strong> <a href="https://wa.me/955 934 887" target="_blank" rel="noopener noreferrer">+244 955 934 887</a></li>
+            <li>
+              <strong>WhatsApp:</strong>{" "}
+              <a
+                href="https://wa.me/955934887"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                +244 955 934 887
+              </a>
+            </li>
             <li><strong>Email:</strong> taskhelpers@gmail.com</li>
             <li><strong>Telefone:</strong> +244 955 934 887 / +244 944 832 074</li>
             <li><strong>Localização:</strong> Luanda – Angola</li>
@@ -23,12 +54,15 @@ function Contato() {
 
         <section className="contato-form">
           <h2>📩 Envia-nos uma mensagem</h2>
-          <form>
-            <input type="text" placeholder="Seu nome" required />
-            <input type="email" placeholder="Seu email" required />
-            <textarea placeholder="Digite sua mensagem..." required></textarea>
+          <form onSubmit={handleSubmit}>
+            <input type="text" name="name" placeholder="Seu nome" required />
+            <input type="email" name="email" placeholder="Seu email" required />
+            <textarea name="message" placeholder="Digite sua mensagem..." required></textarea>
             <button type="submit">Enviar</button>
           </form>
+
+          {/* Mensagem de status */}
+          {status && <p className="mensagem-status">{status}</p>}
         </section>
 
         <section className="contato-redes">
