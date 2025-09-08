@@ -1,19 +1,17 @@
-/* =====================================
-   Reset e fonte global
-===================================== */
+/* Espaço para o conteúdo não ficar escondido atrás do header fixo */
 body {
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Fonte global */
 }
 
 main {
-  padding-top: 100px; /* espaço para header fixo */
+  
+  padding-top: 100px; /* mesmo valor da altura do header (55px + 15px padding) */
 }
 
-/* =====================================
-   Cabeçalho
-===================================== */
+
+/* Cabeçalho */
 .header {
   display: flex;
   justify-content: space-between;
@@ -24,24 +22,28 @@ main {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  z-index: 1000; /* Fica sempre acima */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5); /* sombra discreta */
+ 
 }
 
+/* Área da logo + nome */
 .logo-area {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
+/* Logo circular */
 .logo {
   width: 55px;
   height: 55px;
   object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid #fff;
+  border-radius: 50%; /* círculo */
+  border: 2px solid #fff; /* borda branca */
 }
 
+/* Nome da empresa */
 .empresa {
   color: #000000;
   font-size: 22px;
@@ -49,6 +51,7 @@ main {
   letter-spacing: 1px;
 }
 
+/* Navegação */
 .nav .menu {
   list-style: none;
   display: flex;
@@ -61,81 +64,20 @@ main {
   margin: 0 15px;
 }
 
+/* Links */
 .menu li a {
-  text-decoration: none;
-  color: #000000;
+  text-decoration: none; /* tira a linha */
+  color: #000000; /* cor branca */
   font-size: 18px;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .menu li a:hover {
-  color: #00bcd4;
-  transform: scale(1.1);
+  color: #00bcd4; /* azul no hover */
+  transform: scale(1.1); /* zoom suave */
 }
 
-/* Botão hamburguer */
-.hamburguer {
-  display: none;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 26px;
-  cursor: pointer;
-  z-index: 1100;
-}
 
-/* Menu mobile */
-@media screen and (max-width: 768px) {
-  .hamburguer {
-    display: block;
-  }
-
-  .header {
-    padding: 10px 8px;
-  }
-
-  .logo {
-    width: 45px;
-    height: 45px;
-  }
-
-  .empresa {
-    font-size: 18px;
-  }
-
-  .nav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 70%;
-    height: 100vh;
-    background-color: #111;
-    box-shadow: -2px 0 8px rgba(0,0,0,0.4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: right 0.3s ease-in-out;
-    z-index: 1000;
-  }
-
-  .nav.active {
-    right: 0;
-  }
-
-  .nav .menu {
-    flex-direction: column;
-    gap: 25px;
-  }
-
-  .menu li a {
-    font-size: 20px;
-    color: #fff;
-  }
-}
-
-/* =====================================
-   Carrossel
-===================================== */
 .carousel-container {
   position: relative;
   width: 100%;
@@ -149,6 +91,7 @@ main {
   object-fit: cover;
 }
 
+/* Overlay do texto sobreposto (transparente) */
 .carousel-overlay {
   position: absolute;
   top: 50%;
@@ -162,9 +105,10 @@ main {
 .carousel-overlay h1 {
   font-size: 32px;
   margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* melhora visibilidade sobre a imagem */
 }
 
+/* Botão WhatsApp */
 .btn-whatsapp {
   display: inline-block;
   padding: 12px 25px;
@@ -182,6 +126,7 @@ main {
   transform: scale(1.05);
 }
 
+/* Dots do carrossel */
 .slick-dots li button:before {
   color: #fff;
 }
@@ -190,30 +135,29 @@ main {
   color: #00bcd4;
 }
 
-/* =====================================
-   Seção Sobre
-===================================== */
+/* Seção Sobre */
 .sobre {
   padding: 40px 30px;
   background-color: #f4f4f9;
-  text-align: center;
+  text-align: center; /* centraliza tudo */
 }
 
 .sobre h2 {
   font-size: 30px;
   color: #1a1a1a;
   margin-bottom: 10px;
-  display: inline-block;
+  display: inline-block; /* permite barra com a largura do título */
   position: relative;
 }
 
+/* Linha azul exatamente do tamanho do título */
 .linha-azul {
   display: block;
-  width: 30%;
+  width: 30%; /* 100% do h2 */
   height: 3px;
-  background-color: #00bcd4;
+  background-color: #00bcd4; /* azul do hover do cabeçalho */
   border: none;
-  margin: 10px auto 20px auto;
+  margin: 10px auto 20px auto; /* centraliza a linha */
 }
 
 .sobre p {
@@ -221,19 +165,19 @@ main {
   line-height: 1.6;
   color: #333;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 0 auto; /* centraliza o parágrafo */
 }
 
-/* =====================================
-   Cards Missão, Visão, Valores
-===================================== */
+/* Cards Missão, Visão, Valores */
 .cards {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
+  flex-wrap: wrap; /* permite quebra em telas menores */
+  gap: 30px; /* espaço entre cards */
   padding: 60px 50px;
   background-color: #ffffff;
+  z-index: 1;
+  position: relative;
 }
 
 .card {
@@ -258,21 +202,100 @@ main {
   color: #333;
 }
 
+/* Efeito hover nos cards */
 .card:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
-
-/* =====================================
-   Seções Diferenciais e Como Funciona
-===================================== */
-.diferenciais-section,
-.funciona-section {
+/* Container Diferenciais */
+.diferenciais-section {
   padding: 50px;
   background-color: #f4f4f9;
 }
 
-.diferenciais-container,
+.diferenciais-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Texto Diferenciais */
+.diferenciais-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+}
+
+/* Etapas numeradas */
+.etapa {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.etapa h2 {
+  font-size: 24px;
+  color: #00bcd4;
+  margin: 0;
+  width: 35px; /* largura fixa para alinhar texto */
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* Imagem redonda à direita */
+.diferenciais-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  text-align: center;
+}
+
+.diferenciais-img img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* circular */
+  object-fit: cover;
+  border: 3px solid #00bcd4;
+  margin-bottom: 15px;
+}
+
+.diferenciais-img p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* Responsividade */
+@media screen and (max-width: 900px) {
+  .diferenciais-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .diferenciais-text, .diferenciais-img {
+    align-items: center;
+    text-align: center;
+  }
+
+  .etapa {
+    justify-content: center;
+  }
+}
+/* Container Como Funciona */
+.funciona-section {
+  padding: 50px;
+  background-color: #fff;
+}
+
 .funciona-container {
   display: flex;
   justify-content: space-between;
@@ -282,7 +305,7 @@ main {
   margin: 0 auto;
 }
 
-.diferenciais-text,
+/* Texto Como Funciona */
 .funciona-text {
   display: flex;
   flex-direction: column;
@@ -290,7 +313,7 @@ main {
   max-width: 500px;
 }
 
-.diferenciais-text .etapa,
+/* Etapas numeradas */
 .funciona-text .etapa {
   display: flex;
   align-items: flex-start;
@@ -300,17 +323,16 @@ main {
   line-height: 1.5;
 }
 
-.diferenciais-text .etapa h2,
 .funciona-text .etapa h2 {
   font-size: 24px;
   color: #00bcd4;
   margin: 0;
-  width: 35px;
+  width: 35px; /* largura fixa para alinhar texto */
   text-align: right;
   flex-shrink: 0;
 }
 
-.diferenciais-img,
+/* Imagem redonda à direita */
 .funciona-img {
   display: flex;
   flex-direction: column;
@@ -319,30 +341,49 @@ main {
   text-align: center;
 }
 
-.diferenciais-img img,
 .funciona-img img {
   width: 200px;
   height: 200px;
-  border-radius: 50%;
+  border-radius: 50%; /* circular */
   object-fit: cover;
   border: 3px solid #00bcd4;
   margin-bottom: 15px;
 }
 
-.diferenciais-img p,
 .funciona-img p {
   font-size: 16px;
   color: #333;
   line-height: 1.4;
 }
 
-/* =====================================
-   Rodapé
-===================================== */
+/* Responsividade */
+@media screen and (max-width: 900px) {
+ .funciona-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* centraliza verticalmente */
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* O restante permanece igual */
+
+  .funciona-text, .funciona-img {
+    align-items: center;
+    text-align: center;
+  }
+
+  .funciona-text .etapa {
+    justify-content: center;
+  }
+}
+/* Rodapé */
 .footer {
   background-color: #111;
   color: #fff;
   padding: 20px 40px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .footer-container {
@@ -353,6 +394,7 @@ main {
   align-items: center;
 }
 
+/* Logo pequena */
 .footer-logo {
   display: flex;
   align-items: center;
@@ -360,7 +402,7 @@ main {
 }
 
 .footer-logo img {
-  width: 40px;
+  width: 40px; /* menor que o cabeçalho */
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
@@ -372,6 +414,7 @@ main {
   font-weight: bold;
 }
 
+/* Informações à direita */
 .footer-info {
   display: flex;
   flex-direction: column;
@@ -379,6 +422,7 @@ main {
   gap: 10px;
 }
 
+/* Redes sociais */
 .footer-links {
   display: flex;
   gap: 15px;
@@ -395,14 +439,25 @@ main {
   transform: scale(1.2);
 }
 
+/* Copyright */
 .footer-copy {
   font-size: 14px;
   color: #aaa;
 }
 
-/* =====================================
-   Botão voltar ao topo
-===================================== */
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .footer-info {
+    align-items: center;
+  }
+}
+/* Botão de voltar ao topo */
 .back-to-top {
   position: fixed;
   bottom: 30px;
@@ -426,6 +481,110 @@ main {
   transform: scale(1.1);
 }
 
+/* Menu responsivo com scroll horizontal */
+@media screen and (max-width: 768px) {
+  .nav .menu {
+    display: flex;
+    overflow-x: auto;      /* ativa rolagem horizontal */
+    white-space: nowrap;   /* evita quebra de linha */
+    gap: 15px;
+    padding: 5px 10px;
+    scrollbar-width: none; /* esconde a barra no Firefox */
+  }
+
+  .nav .menu::-webkit-scrollbar {
+    display: none; /* esconde a barra no Chrome/Safari */
+  }
+
+  .menu li {
+    display: inline-block;
+    margin: 0;
+  }
+
+  .menu li a {
+    font-size: 15px; /* menor no mobile */
+    padding: 6px 10px;
+  }
+}
+
+
+/* Cards Missão, Visão, Valores responsivos */
+@media screen and (max-width: 768px) {
+  .cards {
+    flex-direction: column;  /* empilha */
+    align-items: center;
+    padding: 40px 20px;
+    gap: 20px;
+  }
+
+  .card {
+    width: 90%;  /* quase a largura toda */
+  }
+}
+
+/* Diferenciais responsivos */
+@media screen and (max-width: 768px) {
+  .diferenciais-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .diferenciais-text {
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .diferenciais-img img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* Como Funciona responsivo */
+@media screen and (max-width: 768px) {
+  .funciona-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .funciona-text {
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .funciona-img img {
+    width: 150px;
+    height: 150px;
+  }
+}
+/* Ajuste do cabeçalho e menu no mobile */
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 10px 8px; /* menos espaço no topo */
+  }
+
+  .logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .empresa {
+    font-size: 18px; /* nome menor no mobile */
+  }
+
+  .nav .menu {
+    gap: 12px; /* menos espaço entre links */
+  }
+
+  .menu li a {
+    font-size: 14px; /* texto do menu menor */
+    padding: 4px 6px;
+  }
+}
 /* =====================================
    Responsividade geral - mobile
 ===================================== */
