@@ -561,3 +561,27 @@ main {
     height: 150px;
   }
 }
+/* Ajuste do cabeçalho e menu no mobile */
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 10px 8px; /* menos espaço no topo */
+  }
+
+  .logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .empresa {
+    font-size: 18px; /* nome menor no mobile */
+  }
+
+  .nav .menu {
+    gap: 12px; /* menos espaço entre links */
+  }
+
+  .menu li a {
+    font-size: 14px; /* texto do menu menor */
+    padding: 4px 6px;
+  }
+}
