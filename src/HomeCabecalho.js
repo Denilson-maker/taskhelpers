@@ -11,11 +11,12 @@ function HomeCabecalho() {
       <nav className="nav">
         <ul className="menu">
           <li>
-  <Link to="/"onClick={() => {window.scrollTo(0, 0);}}>Início</Link></li>
+  <Link to="/"onClick={() => {window.scrollTo(0, 0);}}>Home</Link></li>
 
           <li><Link to="/servico">Serviços</Link></li>
           <li><Link to="/sobre">Sobre</Link></li>
           <li><Link to="/contato">Contacto</Link></li>
+          <li></li>
         </ul>
       </nav>
     </header>
