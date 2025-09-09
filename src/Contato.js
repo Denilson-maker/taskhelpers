@@ -11,7 +11,7 @@ function Contato() {
     const form = e.target;
     const data = new FormData(form);
 
-    const response = await fetch("https://formspree.io/f/mpwjkybw", {
+    const response = await fetch("https://formspree.io/f/xgvldaoo", {
       method: "POST",
       body: data,
       headers: { Accept: "application/json" },
