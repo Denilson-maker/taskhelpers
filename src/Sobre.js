@@ -73,8 +73,8 @@ function Sobre() {
 
     {/* Card 2 */}
     <div className="card-membro">
-      <img src="j.jpg" alt="Membro 2" />
-      <h3>Jairo Fernando</h3>
+      <img src="jf.jpg" alt="Membro 2" />
+      <h3>Jairo Fernandes</h3>
       <p className="cargo">Diretor de Operações</p>
       <p className="descricao">
         Especialista em logística e gestão de processos, garantindo eficiência

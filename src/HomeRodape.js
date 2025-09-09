@@ -14,9 +14,9 @@ function HomeRodape() {
         {/* Redes sociais */}
         <div className="footer-info">
           <div className="footer-links">
-            <a href="https://wa.me/955 934 887" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a>
+            <a href="https://wa.me/244955934887" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a>
             <a href="#" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
-            <a href="#" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+            <a href="https://www.instagram.com/taskhelpers/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
             <a href="#" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
           </div>
           <div className="footer-copy">

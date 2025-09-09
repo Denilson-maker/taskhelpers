@@ -43,7 +43,7 @@ function Home() {
         <div className="carousel-overlay">
           <h1>“Ajudamos em tudo o que precisares! Tu pedes, nós resolvemos”</h1>
           <a
-            href="https://wa.me/955 934 887"
+            href="https://wa.me/244955934887"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-whatsapp"

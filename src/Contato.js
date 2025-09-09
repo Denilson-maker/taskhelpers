@@ -39,14 +39,14 @@ function Contato() {
             <li>
               <strong>WhatsApp:</strong>{" "}
               <a
-                href="https://wa.me/955934887"
+                href="https://wa.me/244955934887"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 +244 955 934 887
               </a>
             </li>
-            <li><strong>Email:</strong> taskhelpers@gmail.com</li>
+            <li><strong>Email:</strong> taskhelpers007@gmail.com</li>
             <li><strong>Telefone:</strong> +244 955 934 887 / +244 944 832 074</li>
             <li><strong>Localização:</strong> Luanda – Angola</li>
           </ul>
@@ -68,7 +68,7 @@ function Contato() {
         <section className="contato-redes">
           <h2>🌍 Redes Sociais</h2>
           <p>
-            <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">LinkedIn</a>
+            <a href="#">Facebook</a> | <a href="https://www.instagram.com/taskhelpers/">Instagram</a> | <a href="#">LinkedIn</a>
           </p>
         </section>
 

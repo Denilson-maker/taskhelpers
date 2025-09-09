@@ -14,7 +14,7 @@ function Servico() {
           <p>Tu pedes, a Task Helpers resolve — rápido, confiável e com transparência.</p>
           <a
             className="cta-whatsapp"
-            href="https://wa.me/955 934 887"
+            href="https://wa.me/244955934887"
             target="_blank"
             rel="noreferrer"
           >
@@ -140,7 +140,7 @@ function Servico() {
         <div className="cta-centro">
           <a
             className="cta-whatsapp large"
-            href="https://wa.me/955 934 887"
+            href="https://wa.me/244955934887"
             target="_blank"
             rel="noreferrer"
           >
