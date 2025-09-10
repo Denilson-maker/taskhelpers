@@ -73,8 +73,8 @@ function Sobre() {
 
     {/* Card 2 */}
     <div className="card-membro">
-      <img src="jf.jpg" alt="Membro 2" />
-      <h3>Jairo Fernandes</h3>
+      <img src="user.jpg" alt="Membro 2" />
+      <h3>Fernandes</h3>
       <p className="cargo">Diretor de Operações</p>
       <p className="descricao">
         Especialista em logística e gestão de processos, garantindo eficiência
@@ -84,7 +84,7 @@ function Sobre() {
 
     {/* Card 3 */}
     <div className="card-membro">
-      <img src="c.jpg" alt="Membro 3" />
+      <img src="user.jpg" alt="Membro 3" />
       <h3>Cláudio Patrocínio</h3>
       <p className="cargo">Diretor Financeiro</p>
       <p className="descricao">
@@ -95,7 +95,7 @@ function Sobre() {
 
     {/* Card 4 */}
     <div className="card-membro">
-      <img src="g.jpg" alt="Membro 4" />
+      <img src="user.jpg" alt="Membro 4" />
       <h3>Geovany Tchitengula</h3>
       <p className="cargo">Diretor de Marketing & Comunicação</p>
       <p className="descricao">
